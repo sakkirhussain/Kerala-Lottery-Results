@@ -1,0 +1,74 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="container">
+
+  <!-- First Form Card: Smart Search -->
+  <form [formGroup]="searchForm" (ngSubmit)="onCheckClick()" class="search-form">
+    <mat-card class="form-card">
+      <mat-card-header class="card-header">
+        <mat-card-title>Search</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="16px">
+
+          <!-- Number Input Field -->
+          <mat-form-field fxFlex="48" fxFlex.lt-md="48" appearance="outline">
+            <mat-label>Enter Number</mat-label>
+            <input matInput formControlName="number" placeholder="eg: TG434222" />
+            <mat-icon matSuffix>dialpad</mat-icon>
+            <!-- Validation messages -->
+            <mat-error *ngIf="f['number'].errors?.['required']">Number is required</mat-error>
+            <mat-error *ngIf="f['number'].errors?.['minlength']">Enter a valid number</mat-error>
+            <mat-error *ngIf="f['number'].errors?.['maxlength']">Enter a valid number</mat-error>
+          </mat-form-field>
+
+          <!-- Date Input Field -->
+          <mat-form-field fxFlex="48" fxFlex.lt-md="48" appearance="outline">
+            <mat-label>Select Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" placeholder="Select Date" readonly="" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="f['date'].errors?.['required']">Date is required</mat-error>
+          </mat-form-field>
+
+        </div>
+
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="center">
+        <button mat-raised-button style="background-color: var(--primary-color); color: white;"
+          type="submit">Check</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+
+  <!-- Second Card: Results (conditionally shown) -->
+  <mat-card class="responsive-card" *ngIf="showResult">
+
+    <!-- Template when a match is found -->
+    <div style=" text-align: center;" *ngIf="isMatchFound; else noMatchTemplate">
+      <mat-card-title style=" background-color: var(--primary-color); color: white;">Congratulations!</mat-card-title>
+      <mat-card-content>
+        You have won the {{matchedItem}}
+      </mat-card-content>
+
+      <mat-card-actions fxLayout="row" fxLayoutAlign="space-around">
+        <button mat-button (click)="goToResult()">Full Result</button>
+      </mat-card-actions>
+    </div>
+
+    <!-- Template when no match is found -->
+    <ng-template #noMatchTemplate>
+      <div style="text-align: center;">
+        <mat-card-title style=" background-color: var(--primary-color); color: white;">Sorry!</mat-card-title>
+        <mat-card-content>
+          {{cardText}}
+        </mat-card-content>
+        <mat-card-actions fxLayout="row" fxLayoutAlign="space-around" *ngIf="invalidDate==false">
+          <button mat-button (click)="goToResult()">Full Result</button>
+        </mat-card-actions>
+      </div>
+    </ng-template>
+
+  </mat-card>
+
+
+</div>

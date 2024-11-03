@@ -1,0 +1,43 @@
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+  :root {
+    --primary-color: #388e3c;
+  }
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.router-outlet-container {
+  flex: 1;
+  padding-top: 64px;
+}
+
+
+footer {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+

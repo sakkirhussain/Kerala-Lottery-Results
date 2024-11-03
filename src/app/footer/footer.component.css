@@ -1,0 +1,32 @@
+@media (min-width: 600px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-links {
+        flex-direction: row;
+    }
+    .footer-links ul {
+        flex-direction: row;
+        
+    }
+}
+  
+  .google-play-image {
+    width: 100px; 
+    height: auto;
+    cursor: pointer;
+  }
+
+  .youtube-image{
+    width: 45px; 
+    height: auto;
+    cursor: pointer;
+  }
+
+  .version-badge {
+    text-align: center;
+    font-size: 10px;
+    color: fff;
+  }

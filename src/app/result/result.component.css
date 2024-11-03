@@ -1,0 +1,82 @@
+
+
+   /* General Styles */
+
+   .heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--primary-color);
+  }
+   .grid-content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 16px;
+  }
+  
+  .grid-item {
+    padding: 8px 2px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .single-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+  
+  .single-item .grid-item {
+    width: 100%;
+    padding: 16px; 
+  }
+  .card {
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 16px;
+  
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.card-header {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  color: white;
+  
+}
+  
+  @media (max-width: 1000px) {
+    .grid-content {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  @media (max-width: 700px) {
+    .grid-content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .grid-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .ad-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 728px; /* Based on your ad size */
+  }
+  

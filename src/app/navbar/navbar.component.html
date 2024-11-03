@@ -1,0 +1,46 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" style="background-color: gray; color: white;"
+  class="fixed-toolbar">
+  <div fxLayout="row" fxLayoutAlign="start center" fxFlex>
+    <img src="assets/logo.jpeg" alt="Logo" class="logo" />
+    <span class="app-title">Kerala Lottery Results</span>
+  </div>
+  <a mat-button href="" fxHide.xs>
+    Home
+  </a>
+  <a mat-button href="/search" fxHide.xs>
+    Search
+  </a>
+  <a mat-button href="/blog" fxHide.xs>
+    Blogs
+  </a>
+
+  <a mat-button href="/contact" fxHide.xs>
+    Contact
+  </a>
+
+  <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu #dropMenu="matMenu">
+    <ng-container>
+
+      <a href="" mat-menu-item>
+        Home
+      </a>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="navigateToSearch()">
+        Search
+      </button>
+      <mat-divider></mat-divider>
+      <a href="/blog" mat-menu-item>
+        Blogs
+      </a>
+      <mat-divider></mat-divider>
+      <a href="/contact" mat-menu-item>
+        Contact
+      </a>
+
+    </ng-container>
+  </mat-menu>
+</mat-toolbar>

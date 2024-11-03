@@ -1,0 +1,194 @@
+.content {
+    padding: 5px;
+}
+
+.content > mat-card {
+    width: 200px;
+    
+}
+.new-badge {
+    position: absolute;
+    top: 50px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 10;
+    text-transform: uppercase;
+    left: -22px; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 0; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    width: 100px;
+    text-align: center; 
+}
+
+  
+  .download-box {
+    padding: 10px 30px;
+    background-color: #f5fcf5; 
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+  
+.download-box {
+  padding: 10px 30px;
+  background-color: #f5fcf5; 
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px;
+  animation: glow 2s infinite;
+}
+
+
+.download-text {
+  font-size: 1.3rem;
+  font-weight: 600; 
+  margin-right: 10px;
+  
+}
+
+
+.playstore-button {
+text-decoration: none;
+  transition: box-shadow 0.3s ease;
+  color: inherit;
+}
+
+.playstore-image {
+  height: 45px; 
+}
+  
+  @media screen and (max-width: 768px) {
+    .download-text {
+      font-size: 1rem;
+    }
+  
+    .playstore-image {
+      height: 30px; 
+    }
+  
+  }
+  
+  @media screen and (max-width: 390px) {
+    .download-text {
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+  }
+  
+
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: linear-gradient(135deg, #388e3c,#66bb6a);
+    color: white;
+    border-radius: 12px;
+    padding: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    text-align: center; 
+    justify-content: center;
+    padding: 8px;
+    height: 70px;
+    align-items: center;
+  }
+  
+  .card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: center;
+}
+
+  
+  .card-details {
+    padding: 8px 16px;
+  }
+  
+  .draw-date {
+    font-size: 14px;
+  }
+  
+  .code-box {
+    background-color: rgba(255, 152, 0, 0.8);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .circle-logo {
+    position: fixed;
+    right: 16px;           
+    bottom: 16px;          
+    width: 80px;           
+    height: 80px;
+    background-color: #f5fcf5; 
+    border-radius: 50%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 1000;
+    animation: pulse 2s infinite;
+  }
+  
+  .circle-logo img {
+    width: 80%;            
+    height: auto;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px var(--primary-color);
+    }
+    50% {
+      transform: scale(1.1); 
+      box-shadow: 0 0 20px var(--primary-color); 
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 10px var(--primary-color)
+    }
+    50% {
+      box-shadow: 0 0 20px var(--primary-color) 
+    }
+  }
+  
+  
+  

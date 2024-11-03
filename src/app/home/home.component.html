@@ -1,0 +1,48 @@
+<div class="content" fxLayout="column" fxLayoutAlign="center center">
+ <!-- Download Section -->
+ 
+ <a href="https://play.google.com/store/apps/details?id=com.LapofyApps.kll" class="playstore-button">
+  <div fxLayout="row" fxFlex="100%" fxLayoutAlign="center center" fxLayoutGap="16px" class="download-box">
+    <span class="download-text">Download Now</span>
+      <img src="assets/playstore_logo.png" alt="Get it on Google Play" class="playstore-image" />
+  </div>
+</a>
+
+
+<a href="https://play.google.com/store/apps/details?id=com.LapofyApps.kll" >
+<div class="circle-logo"  *ngIf="isScrolled">
+  <img src="assets/google-play-store-small.png" alt="Logo">
+</div>
+</a>
+
+
+
+  <div class="content" fxLayout="row" fxLayoutAlign="center center" style="width: 100%;">
+    <div fxFlex="80%" fxFlex.gt-md="70%">
+      <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.md="33%" fxFlex.sm="50%" *ngFor="let i of paginatedLotteries">
+          <a (click)="goToResult(i.id)" class="card-link">
+            <mat-card class="mat-elevation-z4 card">
+              <mat-card-header class="card-header">
+                <div *ngIf="isNew(i.draw_date)" class="new-badge">NEW</div>
+                <mat-card-title>{{i.lottery_name}}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content class="card-details" fxLayout="row" fxLayoutAlign="space-between center">
+                <span class="draw-date">{{i.draw_date}}</span>
+                <span class="code-box">{{i.id}}</span>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Pagination Controls -->
+  <div fxLayout="row" fxLayoutAlign="center center" class="pagination-controls">
+    <button mat-button (click)="previousPage()" [disabled]="currentPage === 0">Previous</button>
+    <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+    <button mat-button (click)="nextPage()" [disabled]="currentPage === totalPages - 1">Next</button>
+  </div>
+
+</div>

@@ -1,0 +1,48 @@
+.blog-list {
+    padding: 20px;
+  }
+  
+  mat-card {
+    margin-bottom: 20px;
+  }
+  
+  mat-card-title {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+  mat-card-subtitle {
+    font-size: 0.9rem;
+    color: gray;
+  }
+  
+  mat-card-content {
+    padding-top: 10px;
+    font-size: 18px;
+  }
+
+
+  .blog-div {
+    margin-right: 0 !important;
+  }
+
+  button {
+    color: var(--primary-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  
+ 
+  
+  
+
+  
+  

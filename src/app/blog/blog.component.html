@@ -1,0 +1,17 @@
+<div class="blog-list" fxLayout="row wrap" fxLayoutGap="16px" fxLayoutAlign="center center">
+  <div *ngFor="let blog of blogs; let i = index" fxFlex="70%" fxFlex.xs="100%" fxFlex.sm="90%" fxFlex.md="75%"
+    class="blog-div">
+    <mat-card class="mat-elevation-z4 blog-card" style="background-color:#f5fcf5">
+      <mat-card-header>
+        <mat-card-title>{{ blog.title }}</mat-card-title>
+        <mat-card-subtitle style="font-size: 18px;">{{ blog.date }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="post-text" [innerHTML]="blog.showFullText ? blog.content : (blog.content | slice:0:700) + '...'"></p>
+        <button (click)="toggleText(i)" class="btn">
+          {{ blog.showFullText ? 'Read Less' : 'Read More' }}
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

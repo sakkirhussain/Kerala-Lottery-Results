@@ -1,0 +1,38 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <!-- Heading -->
+  <h2 class="heading" fxLayoutAlign="center center" style="margin-bottom: 20px;">
+    <span *ngIf="lottery">{{ lottery?.lottery_name }} ({{ lottery.draw_date }})</span>
+  </h2>
+
+  <div class="content" fxLayout="row" fxLayoutAlign="center center" style="width: 100%;">
+    <div fxFlex="90%" fxFlex.gt-md="70%" fxFlex.gt-sm="80%">
+
+ <!-- Ad Container -->
+<div class="ad-container">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-3940256099942544"
+       data-ad-slot="1234567890"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+</div>
+
+      <div class="grid-container">
+        <div *ngFor="let i of numbers" class="card-item">
+          <mat-card class="mat-elevation-z4 card">
+            <mat-card-header class="card-header" style=" padding: 12px; justify-content: center;">
+              <mat-card-title style="font-size: 18px;">{{prizeInfo.prize_details[i]}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="card-content" style="padding: 16px;">
+              <div class="grid-content" [ngClass]="{'single-item': stringArrays[i].length === 1}">
+
+                <div *ngFor="let number of stringArrays[i]" class="grid-item">
+                  {{ number }}
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>

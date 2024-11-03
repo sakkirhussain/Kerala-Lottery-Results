@@ -1,0 +1,71 @@
+/* Ensure form is full-width on mobile and scales well */
+.search-form {
+    width: 100%;
+    max-width: 600px; /* This ensures the form doesn't get too wide */
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  .mat-card {
+    width: 100%;
+    padding: 16px;
+    
+  }
+  .form-card{
+    margin-top: 10px;
+  }
+  .card-header{
+    background-color: var(--primary-color);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 4px;
+}
+  .mat-form-field {
+    width: 100%; 
+  }
+  
+  @media (max-width: 600px) {
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 960px) {
+    .mat-form-field {
+      width: 100%; 
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .mat-form-field {
+      width: 48%; 
+    }
+  
+    .form-card {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .mat-card-content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .responsive-card {
+    width: 100%;
+    max-width: 400px;  
+    margin: 10px;
+  }
+  
+
+  .full-width {
+    width: 100%;
+  }
+  
+
+
+
+
+

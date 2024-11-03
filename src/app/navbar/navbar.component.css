@@ -1,0 +1,103 @@
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+  }
+  
+  .navbar-brand {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar-toggler {
+    background: transparent;
+    border: none;
+    color: white;
+  }
+ 
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .collapse {
+    display: none; 
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  @media (min-width: 768px) {
+    .navbar-collapse {
+      display: flex !important;
+      flex-direction: row !important;
+    }
+  
+    .collapse {
+      display: flex !important;
+    }
+  
+    .nav-item {
+      margin: 0 1rem;
+    }
+  }
+
+  .logo {
+    height: 35px;
+    margin-right: 8px;
+  }
+  
+  .app-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .logo {
+      height: 30px;
+    }
+    
+    .app-title {
+      font-size: 1rem;
+    }
+  }
+  
+  .google-play-button {
+    margin-top: 20px; /* Adjust space between card and button */
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  .google-play-image {
+    width: 100px; /* Adjust the size to fit your design */
+    height: auto;
+    cursor: pointer;
+  }
+
+  .fixed-toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures toolbar stays above other elements */
+   
+  }
+  
